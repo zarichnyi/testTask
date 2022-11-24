@@ -6,15 +6,15 @@
 EXAMPLES
 - Go to http://localhost:3000/ to generate default user data.
 
-- Login http://localhost:3000/login
+- Login GET http://localhost:3000/login
 req.body {
     nick_name: "Programmer",
     password: "54321"
 }
 !!! After Login USE Authorization: "some_token" for getting access to endpoints
 
-- Logout http://localhost:3000/logout
-- Refresh http://localhost:3000/refresh
+- Logout POST http://localhost:3000/logout
+- Refresh POST http://localhost:3000/refresh
 
 - GET http://localhost:3000/users - require all users from DB.
 
@@ -63,4 +63,8 @@ req.body {
     "title": "New Story",
     "summary": "NEW short describe story"
 }
+
+- POST http://localhost:3000/topics?sort=asc
+- POST http://localhost:3000/topics?sort=desc
+- POST http://localhost:3000/topics?sort=asc&from=Wed, 23 Nov 2022 14:24:06 GMT&to=Wed, 23 Nov 2022 14:25:06 GMT
 
